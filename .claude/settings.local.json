@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat /tmp/design/portfolio/project/portfolio-app.jsx)",
+      "Read(//tmp/design/portfolio/project/**)",
+      "Bash(cp /tmp/design/portfolio/project/portfolio.css /c/Users/magic/Code/portfolio/css/portfolio.css && echo done)",
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(mkdir -p /tmp/design_extract)",
+      "Bash(cp \"C:/Users/magic/.claude/projects/c--Users-magic-Code-portfolio/14fde27d-3a1a-4dc7-864d-7cbe734a1972/tool-results/webfetch-1779160034835-tom4v3.bin\" /tmp/design_extract/archive.gz)",
+      "Read(//tmp/**)",
+      "Bash(tar -xzf archive.gz)",
+      "Bash(echo \"tar exit: $?\")",
+      "Bash(find /mnt/c/Users/magic/Code -name \"portfolio-app*\" 2>/dev/null)",
+      "Read(//mnt/c/Users/magic/**)"
+    ],
+    "additionalDirectories": [
+      "\\tmp\\design\\portfolio\\project"
+    ]
+  }
+}
