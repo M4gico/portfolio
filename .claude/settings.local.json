@@ -11,7 +11,10 @@
       "Bash(tar -xzf archive.gz)",
       "Bash(echo \"tar exit: $?\")",
       "Bash(find /mnt/c/Users/magic/Code -name \"portfolio-app*\" 2>/dev/null)",
-      "Read(//mnt/c/Users/magic/**)"
+      "Read(//mnt/c/Users/magic/**)",
+      "Bash(node -e ' *)",
+      "Bash(curl -sL -o images/logos/unity.svg \"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg\")",
+      "Bash(curl -sL -o images/logos/python.svg \"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg\")"
     ],
     "additionalDirectories": [
       "\\tmp\\design\\portfolio\\project"

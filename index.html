@@ -45,7 +45,7 @@
         </a>
         <div class="nav-links">
           <a href="professionel.html">Professionel</a>
-          <a href="#academique">Académique</a>
+          <a href="academique.html">Académique</a>
           <a href="#personnel">Personnel</a>
           <a href="#contact">Contact</a>
         </div>
@@ -108,9 +108,6 @@
           <div class="hero-photo-frame">
             <img src="images/picture_me.jpeg" alt="Antoine BINNER"
               style="width:100%;height:100%;object-fit:cover;display:block;" />
-          </div>
-          <div class="hero-photo-cap">
-            <span>↳</span> Bordeaux · 2026
           </div>
         </div>
       </header>
@@ -186,7 +183,7 @@
                   alt="UEC" style="width:100%;height:100%;object-fit:contain;" /></div>
               <div class="job-meta">
                 <div class="job-co">AWCC — University of Electro-Communications — Tokyo</div>
-                <div class="job-role">Stage de recherche · Wi-Fi sensing</div>
+                <div class="job-role">Stage de recherche · Wi-Fi</div>
                 <div class="job-when">08 avril — 12 juin 2026 · 2 mois ½</div>
                 <div class="job-loc">Tokyo, Japon 🇯🇵</div>
               </div>
@@ -205,8 +202,7 @@
                   </svg>
                 </div>
                 <blockquote>
-                  L'outil sélectionnera automatiquement le point d'accès Wi-Fi le moins chargé, en mesurant
-                  en temps réel l'occupation de chaque réseau — optimisant la connexion dans un environnement multi-AP.
+                  L'outil dévelopé mesure l'occupation du channel WiFi
                 </blockquote>
               </figure>
               <div class="job-skills">
@@ -234,6 +230,15 @@
             </div>
           </article>
         </div>
+        <div class="sect-discover">
+          <a href="professionel.html" class="btn btn--ghost btn--sm">
+            <span>Découvrir en détail</span>
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
       </section>
 
       <section class="sect" id="academique">
@@ -243,78 +248,71 @@
             <span class="sectmark-line"></span>
             <span class="sectmark-label">Académique</span>
           </div>
-          <div class="sect-head sect-head--solo sect-head--with-actions">
-            <div class="sect-actions">
-              <a class="btn btn--ghost" href="sumo-details.html">
-                <span>Robot Sumo</span>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </a>
-              <a class="btn btn--ghost" href="kart-details.html">
-                <span>Kart à hélice</span>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </a>
-            </div>
-          </div>
         </div>
 
         <div class="acad-grid">
           <article class="acad-card">
             <div class="acad-top">
-              <span class="acad-n">A.01</span>
-              <span class="acad-sub">Robot autonome · semestre 3</span>
+              <span class="acad-n">Semestre 4</span>
             </div>
-            <h3 class="acad-title">Robot Sumo</h3>
+            <h3 class="acad-title">Antenne directionnelle HB9CV</h3>
             <p class="acad-body">
-              Conception et intégration capteurs d'un robot traqueur, et contribution à la réalisation de son PCB. De la
-              définition du besoin jusqu'aux essais en arène.
+              Conception, fabrication et vérification d'une antenne <span class="hl">directionnelle</span> centré sur
+              une fréquence à <strong>144</strong> MHz
+              <span style="color:var(--c-accent);">→</span>
+              Chasse à la balise dans le campus universitaire
             </p>
             <div class="acad-flow">
-              <span class="acad-step">Étude &amp; schéma</span>
+              <span class="acad-step">Comparatif des possibilités</span>
               <span class="acad-arrow">→</span>
-              <span class="acad-step">PCB sur mesure</span>
+              <span class="acad-step">Simulation logiciel</span>
               <span class="acad-arrow">→</span>
-              <span class="acad-step">Intégration capteurs</span>
+              <span class="acad-step">Fabrication</span>
               <span class="acad-arrow">→</span>
-              <span class="acad-step">Tests en arène</span>
+              <span class="acad-step">Soudure de composants pour adaptation d'impédance</span>
             </div>
             <div class="acad-vis">
-              <img src="images/robot_sumo.png" alt="Robot Sumo"
-                style="display:block;width:100%;height:160px;object-fit:cover;" />
+              <img src="images/Antenne_HB9CV/Antenne.jpg" alt="Antenne HB9CV"
+                style="display:block;width:100%;height:100%;object-fit:cover;" />
             </div>
           </article>
 
           <article class="acad-card">
             <div class="acad-top">
-              <span class="acad-n">A.02</span>
-              <span class="acad-sub">Véhicule radio-commandé · semestre 2</span>
+              <span class="acad-n">Semestre 2</span>
             </div>
             <h3 class="acad-title">Kart à hélice</h3>
             <p class="acad-body">
-              Conception et vérification des chaînes d'acquisition et d'action d'un kart entraîné par une hélice, piloté
-              à la télécommande IR. Schéma, routage du PCB, fabrication et mise au point.
+              Conception et fabrication électronique, puis vérification générale d'un kart à hélice dirigé par une
+              télécommande par <span class="hl">communication infrarouge</span> (protocole NEC)
             </p>
             <div class="acad-flow">
-              <span class="acad-step">Étude &amp; schéma</span>
+              <span class="acad-step">Conception des composants</span>
               <span class="acad-arrow">→</span>
-              <span class="acad-step">PCB sur mesure</span>
+              <span class="acad-step">Routage</span>
               <span class="acad-arrow">→</span>
-              <span class="acad-step">Fabrication maison</span>
+              <span class="acad-step">Fabrication du PCB</span>
               <span class="acad-arrow">→</span>
-              <span class="acad-step">Tests &amp; réglages</span>
+              <span class="acad-step">Réglages &amp; vérification</span>
             </div>
             <div class="acad-vis">
               <img src="images/kart_a_helice.png" alt="Kart à hélice"
-                style="display:block;width:100%;height:160px;object-fit:cover;" />
+                style="display:block;width:100%;height:100%;object-fit:cover;" />
             </div>
           </article>
         </div>
+        <div class="sect-discover">
+          <a href="academique.html" class="btn btn--ghost btn--sm">
+            <span>Découvrir en détail</span>
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
       </section>
+
+      <!--03 - personnel -->
 
       <section class="sect" id="personnel">
         <div class="sect-intro">
@@ -323,87 +321,60 @@
             <span class="sectmark-line"></span>
             <span class="sectmark-label">Personnel</span>
           </div>
-          <div class="sect-head sect-head--solo sect-head--with-actions">
-            <p class="sect-sub">
-              Quelques projets, quelques habitudes. Tout n'est pas électronique, et c'est un peu l'idée.
-            </p>
-            <div class="sect-actions">
-              <a class="btn btn--ghost" href="projects-personal.html#video-games">
-                <span>Jeux vidéo</span>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </a>
-              <a class="btn btn--ghost" href="projects-personal.html#pyqt-app">
-                <span>App PyQt</span>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </a>
-              <a class="btn btn--ghost" href="projects-personal.html#content-creation">
-                <span>Vidéos EN</span>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </a>
-            </div>
-          </div>
         </div>
 
         <div class="perso-grid">
           <article class="perso perso--feature">
-            <div class="perso-tag">Projet en cours · depuis 2024</div>
+            <div class="perso-tag">2024 - Maintenant</div>
             <h3 class="perso-h3">
-              Création de <em>jeux vidéo</em> avec un ami designer.
+              Création de <em>jeux vidéo</em> en duo
             </h3>
             <p class="perso-p">
-              Je m'occupe de toute la partie technique — code C# et moteur <span class="hl">Unity</span> — pendant qu'un
-              ami graphiste s'occupe de la direction artistique. À ce jour&nbsp;: plusieurs petits jeux et trois
-              <em>game jams</em> finies.
+              Réalisation de toute la partie technique — code C# et moteur <span class="hl">Unity</span>. <br>
+              Actuellement, plusieurs prototypes de jeux et <strong>trois</strong> game jams réalisées.
             </p>
             <div class="perso-stats">
               <div><b>3</b><span>game jams</span></div>
               <div><b>2½</b><span>années de duo</span></div>
-              <div><b>C#</b><span>· Unity</span></div>
+              <div><b>C#</b><span> Programmation</span></div>
             </div>
             <div class="perso-vis">
               <div class="game-grid">
-                <div class="game-slot game-slot--main">capture · jeu n°1</div>
-                <div class="game-slot">game jam #1</div>
-                <div class="game-slot game-slot--side">jeu n°2</div>
-                <div class="game-slot">game jam #2</div>
+                <div class="game-slot game-slot--main">
+                  <video src="videos/Gameplay_TOM_3.mov" autoplay muted loop playsinline></video>
+                </div>
+                <div class="game-slot">
+                  <img src="images/SoapRiot/soapriot_1.png" alt="Game jam #1 — Soap Riot" />
+                </div>
+                <div class="game-slot game-slot--side">
+                  <video src="videos/vanity_of_vanities.mp4" autoplay muted loop playsinline></video>
+                </div>
+                <div class="game-slot">
+                  <img src="images/MolecAdventures/molec_adventure_1.png" alt="Game jam #2 — Molec Adventures" />
+                </div>
               </div>
             </div>
           </article>
 
           <article class="perso perso--app">
-            <div class="perso-tag">Outil personnel · 2025</div>
+            <div class="perso-tag">2025</div>
             <h3 class="perso-h3">
-              Une app <em>PyQt</em> pour ranger ses fenêtres.
+              Une application pour lancer plusieurs <span class="hl">logiciels</span> sur plusieurs <span
+                class="hl">écrans</span>.
             </h3>
             <p class="perso-p">
               Placement rapide d'applications sur plusieurs écrans, en un raccourci. Née d'un agacement, devenue un
               outil que j'utilise tous les jours.
             </p>
-            <div class="app-vis" aria-hidden="true">
-              <div class="app-mon">
-                <div class="app-mon-bar"><span></span><span></span><span></span></div>
-                <div class="app-tile" style="left:8%;top:18%;width:38%;height:55%;">A</div>
-                <div class="app-tile" style="left:52%;top:18%;width:40%;height:32%;">B</div>
-                <div class="app-tile" style="left:52%;top:55%;width:40%;height:32%;">C</div>
-              </div>
-              <div class="app-mon app-mon--small">
-                <div class="app-mon-bar"><span></span><span></span><span></span></div>
-                <div class="app-tile" style="left:8%;top:18%;width:84%;height:70%;">D</div>
-              </div>
-            </div>
+            <figure class="app-vis">
+              <img src="images/tidy_up_screen.png" alt="Tidy Up — capture d'écran de l'application"
+                style="width:100%;display:block;border-radius:var(--radius);" />
+              <figcaption>Interface de l'application TidyUp</figcaption>
+            </figure>
           </article>
 
           <article class="perso perso--video">
-            <div class="perso-tag">Vidéo · EN</div>
+            <div class="perso-tag">2024</div>
             <h3 class="perso-h3">
               Des vidéos en <em>anglais</em>,<br />sur le hardware.
             </h3>
@@ -419,17 +390,26 @@
           </article>
 
           <article class="perso perso--sport">
-            <div class="perso-tag">Hors écran</div>
-            <h3 class="perso-h3">Le corps aussi.</h3>
+            <div class="perso-tag">Hors projet</div>
+            <h3 class="perso-h3">Pratique sportive</h3>
             <p class="perso-p">
-              Basket depuis l'âge de 3 ans — l'équipe avant l'individu. Haltérophilie / muscu depuis 2 ans, avec un
-              coach, parce qu'à un moment il faut aussi savoir bien faire un mouvement.
+              Basket en club depuis l'âge de 3 ans. Haltérophilie / muscu depuis 2 ans, avec un
+              coach pour améliorer les performances sportives axées sur le basket (explosivité, détente verticale)
             </p>
             <ul class="sport-list">
               <li><span>↳</span> Basketball · 18+ ans</li>
               <li><span>↳</span> Haltérophilie · 2 ans avec coach</li>
             </ul>
           </article>
+        </div>
+        <div class="sect-discover">
+          <a href="personnel.html" class="btn btn--ghost btn--sm">
+            <span>Découvrir en détail</span>
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
         </div>
       </section>
 
@@ -486,6 +466,32 @@
     })();
   </script>
   <script src="js/reveal.js" defer></script>
+  <script>
+    (function () {
+      function equalizeAcadVis() {
+        var visEls = document.querySelectorAll('#academique .acad-vis');
+        if (visEls.length < 2) return;
+        var minH = Infinity;
+        visEls.forEach(function (vis) {
+          vis.style.height = '';
+          var img = vis.querySelector('img');
+          if (!img || !img.naturalWidth) return;
+          var h = vis.offsetWidth * (img.naturalHeight / img.naturalWidth);
+          if (h < minH) minH = h;
+        });
+        if (isFinite(minH) && minH > 0) {
+          visEls.forEach(function (vis) { vis.style.height = minH + 'px'; });
+        }
+      }
+      var imgs = document.querySelectorAll('#academique .acad-vis img');
+      var loaded = 0;
+      imgs.forEach(function (img) {
+        if (img.complete) { loaded++; if (loaded === imgs.length) equalizeAcadVis(); }
+        else img.addEventListener('load', function () { loaded++; if (loaded === imgs.length) equalizeAcadVis(); });
+      });
+      window.addEventListener('resize', equalizeAcadVis);
+    })();
+  </script>
 </body>
 
 </html>

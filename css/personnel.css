@@ -1,0 +1,452 @@
+/* personnel.css — page-specific styles, layered on top of portfolio.css */
+
+.nav-active {
+  color: var(--c-ink) !important;
+}
+
+.nav-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--c-accent);
+  border-radius: 2px;
+}
+
+/* ── page hero ────────────────────────────────────────────────────────── */
+.phero {
+  padding: clamp(20px, 3vw, 40px) 0 clamp(28px, 4vw, 52px);
+}
+
+.phero-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--c-muted);
+  padding: 8px 14px 8px 12px;
+  border: 1px solid var(--c-line);
+  border-radius: 999px;
+  background: var(--c-surface);
+  white-space: nowrap;
+  transition: border-color var(--t-fast), color var(--t-fast), transform var(--t-fast);
+  margin-bottom: clamp(28px, 4vw, 48px);
+}
+
+.phero-back:hover {
+  color: var(--c-ink);
+  border-color: var(--c-ink);
+  transform: translateX(-2px);
+}
+
+.phero-head {
+  margin-bottom: clamp(24px, 3vw, 36px);
+}
+
+.phero-h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(26px, 3.2vw, 46px);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  margin: 0 0 22px;
+  color: var(--c-ink);
+  text-wrap: balance;
+}
+
+.phero-h1 em {
+  color: var(--c-accent);
+  font-style: var(--display-italic-style);
+}
+
+.phero-lede {
+  font-size: clamp(16px, 1.3vw, 19px);
+  line-height: 1.55;
+  color: var(--c-muted);
+  margin: 0;
+  max-width: 50ch;
+  text-wrap: pretty;
+}
+
+/* ── pjob card ────────────────────────────────────────────────────────── */
+.pjob {
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.pjob::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--c-accent);
+}
+
+.pjob-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: clamp(18px, 2.5vw, 32px);
+  align-items: center;
+  padding: clamp(24px, 3vw, 36px) clamp(28px, 3.5vw, 44px);
+  border-bottom: 1px solid var(--c-line);
+  background: linear-gradient(180deg, var(--c-surface), color-mix(in oklab, var(--c-accentSoft) 25%, var(--c-surface)));
+}
+
+@media (max-width: 720px) {
+  .pjob-head {
+    grid-template-columns: auto 1fr;
+  }
+
+  .pjob-when {
+    grid-column: 1 / -1;
+    border-top: 1px dashed var(--c-line);
+    padding-top: 14px;
+  }
+}
+
+.pjob-logo {
+  width: 96px;
+  height: 96px;
+  background: var(--c-accent);
+  color: var(--c-bg);
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 32px;
+  letter-spacing: -0.02em;
+}
+
+.pjob-co {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.4vw, 32px);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: var(--c-ink);
+}
+
+.pjob-desc {
+  font-size: 12.5px;
+  color: var(--c-muted);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.pjob-role {
+  font-size: 14px;
+  color: var(--c-muted);
+  margin-top: 8px;
+}
+
+.pjob-when {
+  font-size: 12.5px;
+  color: var(--c-ink);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .pjob-when {
+    text-align: left;
+  }
+}
+
+.pjob-when-k {
+  font-size: 10.5px;
+  color: var(--c-muted);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-right: 6px;
+}
+
+/* ── two-column layout ────────────────────────────────────────────────── */
+.pjob-layout {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+}
+
+.pjob-layout--reverse {
+  grid-template-columns: 45fr 55fr;
+}
+
+.pjob-layout-img {
+  overflow: hidden;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  background: var(--c-bg);
+}
+
+.pjob-layout-img img {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  object-fit: contain;
+  display: block;
+}
+
+.pjob-layout-img iframe {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  border: 0;
+  display: block;
+}
+
+.pjob-layout-img figcaption {
+  font-size: 11.5px;
+  color: var(--c-muted);
+  font-style: italic;
+  padding: 10px 14px;
+  background: var(--c-surface);
+  border-top: 1px solid var(--c-line);
+  line-height: 1.4;
+}
+
+.pjob-layout-detail {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(24px, 3vw, 36px);
+  border-right: 1px solid var(--c-line);
+}
+
+.pjob-layout--reverse .pjob-layout-detail {
+  border-right: none;
+  border-left: 1px solid var(--c-line);
+}
+
+.pjob-layout-row {
+  padding: clamp(16px, 2vw, 24px) 0;
+  border-bottom: 1px dashed var(--c-line);
+}
+
+.pjob-layout-row:first-child {
+  padding-top: 0;
+}
+
+.pjob-layout-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pjob-layout-mission {
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.65;
+  color: var(--c-ink);
+  margin: 0;
+  text-align: justify;
+}
+
+.pjob-layout-mission strong {
+  font-weight: 600;
+}
+
+.pjob-layout-detail .job-skills-cols {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* ── solo block (no media column — e.g. sport) ────────────────────────── */
+.pjob-solo {
+  padding: clamp(24px, 3vw, 36px);
+}
+
+.pjob-solo .job-skills-cols {
+  border-top: none;
+  padding-top: 0;
+}
+
+@media (max-width: 860px) {
+
+  .pjob-layout,
+  .pjob-layout--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .pjob-layout-img {
+    min-height: 220px;
+  }
+
+  .pjob-layout-detail,
+  .pjob-layout--reverse .pjob-layout-detail {
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid var(--c-line);
+  }
+}
+
+/* ── démarche flow (steps with arrows) ────────────────────────────────── */
+.pjob-flow {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pjob-flow li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--c-ink);
+}
+
+.pjob-flow li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--c-accent);
+  font-weight: 600;
+}
+
+/* ── carousel (media area — supports img + video) ─────────────────────── */
+.acad-carousel {
+  position: relative;
+  margin: 0;
+}
+
+.acad-carousel-track {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+  background: var(--c-bg);
+}
+
+.acad-carousel-track img,
+.acad-carousel-track video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 400ms ease;
+  pointer-events: none;
+}
+
+.acad-carousel-track video {
+  object-fit: contain;
+}
+
+.acad-carousel-track img.is-active,
+.acad-carousel-track video.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.acad-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--c-line);
+  background: color-mix(in oklab, var(--c-surface) 88%, transparent);
+  color: var(--c-ink);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  transition: background var(--t-fast), color var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
+  z-index: 2;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.acad-carousel-btn:hover {
+  background: var(--c-accent);
+  color: var(--c-bg);
+  border-color: var(--c-accent);
+}
+
+.acad-carousel-btn--prev {
+  left: 12px;
+}
+
+.acad-carousel-btn--next {
+  right: 12px;
+}
+
+.acad-carousel-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 7px;
+  z-index: 2;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--c-surface) 70%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.acad-carousel-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--c-line);
+  background: var(--c-surface);
+  padding: 0;
+  cursor: pointer;
+  transition: background var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
+}
+
+.acad-carousel-dots button.is-active {
+  background: var(--c-accent);
+  border-color: var(--c-accent);
+  transform: scale(1.15);
+}
+
+/* hide nav controls when only one media */
+.acad-carousel[data-count="1"] .acad-carousel-btn,
+.acad-carousel[data-count="1"] .acad-carousel-dots {
+  display: none;
+}
+
+/* ── liens strip (external link buttons) ──────────────────────────────── */
+.pjob-docs {
+  padding: clamp(18px, 2.2vw, 24px) clamp(28px, 3.5vw, 44px);
+  border-top: 1px solid var(--c-line);
+  background: color-mix(in oklab, var(--c-accentSoft) 18%, var(--c-surface));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 18px;
+}
+
+.pjob-docs-label {
+  font-size: 11.5px;
+  color: var(--c-muted);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.pjob-docs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pjob-docs .btn {
+  background: var(--c-surface);
+}
