@@ -1550,6 +1550,49 @@ em {
   display: inline-block;
 }
 
+/* bilan / difficultés rencontrées (bandeau en bas de carte pjob) */
+.pjob-bilan {
+  padding: clamp(20px, 2.6vw, 30px) clamp(28px, 3.5vw, 44px);
+  border-top: 1px solid var(--c-line);
+}
+
+/* placeholder de contenu à compléter */
+.todo-placeholder {
+  border: 1px dashed var(--c-accent);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  background: color-mix(in oklab, var(--c-accentSoft) 18%, var(--c-surface));
+  color: var(--c-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.todo-placeholder-k {
+  display: inline-block;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.todo-placeholder p {
+  margin: 0;
+}
+
+.todo-placeholder ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.btn.is-placeholder {
+  opacity: 0.6;
+  border-style: dashed;
+  cursor: default;
+  pointer-events: none;
+}
+
 /* shared skill cards (professionel + index) */
 .skills-grid {
   display: grid;

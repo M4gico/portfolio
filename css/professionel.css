@@ -645,6 +645,35 @@
   }
 }
 
+/* docs strip (rapports) */
+.pjob-docs {
+  padding: clamp(18px, 2.2vw, 24px) clamp(28px, 3.5vw, 44px);
+  border-top: 1px solid var(--c-line);
+  background: color-mix(in oklab, var(--c-accentSoft) 18%, var(--c-surface));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 18px;
+}
+
+.pjob-docs-label {
+  font-size: 11.5px;
+  color: var(--c-muted);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.pjob-docs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pjob-docs .btn {
+  background: var(--c-surface);
+}
+
 /* skills grid */
 .skills-grid {
   display: grid;

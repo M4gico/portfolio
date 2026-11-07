@@ -29,8 +29,8 @@
         </a>
         <div class="nav-links">
           <a href="professionel.html" class="nav-active">Professionel</a>
-          <a href="academique.html">Académique</a>
           <a href="personnel.html">Personnel</a>
+          <a href="academique.html">Académique</a>
           <a href="index.html#contact">Contact</a>
         </div>
         <a class="nav-cv" href="Files/Antoine_BINNER_CV.pdf" target="_blank" rel="noopener">
@@ -64,8 +64,8 @@
         <div class="phero-stats-row">
           <div class="phero-stat">
             <span class="phero-stat-k">Depuis</span>
-            <span class="phero-stat-v">Sept. 2024 <span
-                style="font-size:0.65em;color:var(--c-muted);font-style:normal;">(1 an et 9 mois)</span></span>
+            <span class="phero-stat-v">Sept. 2024 <span id="serma-duration" data-start="2024-09"
+                style="font-size:0.65em;color:var(--c-muted);font-style:normal;"></span></span>
           </div>
           <div class="phero-stat">
             <span class="phero-stat-k">Pays</span>
@@ -269,6 +269,29 @@
               </div>
             </div>
           </div>
+
+          <!-- bilan de l'alternance -->
+          <div class="pjob-bilan">
+            <h4 class="job-skills-title">Bilan &amp; difficultés rencontrées</h4>
+            <div class="todo-placeholder">
+              <span class="todo-placeholder-k">À compléter</span>
+              <ul>
+                <li>Problèmes rencontrés pendant l'alternance et solutions apportées</li>
+                <li>Ce que j'ai appris (techniquement et sur moi-même)</li>
+                <li>Ce que je ferais autrement · auto-évaluation de ma progression</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- rapports -->
+          <div class="pjob-docs">
+            <span class="pjob-docs-label">Documents</span>
+            <div class="pjob-docs-list">
+              <span class="btn btn--ghost btn--sm is-placeholder" aria-disabled="true">
+                <span>Rapport d'activités de l'alternance — à ajouter</span>
+              </span>
+            </div>
+          </div>
         </article>
       </section>
 
@@ -354,6 +377,29 @@
               <figcaption>Mesures en temps réel du réseau Wi-Fi 5G — bitrate, latence et RSSI</figcaption>
             </figure>
           </div>
+
+          <!-- bilan du stage -->
+          <div class="pjob-bilan">
+            <h4 class="job-skills-title">Bilan &amp; difficultés rencontrées</h4>
+            <div class="todo-placeholder">
+              <span class="todo-placeholder-k">À compléter</span>
+              <ul>
+                <li>Problèmes rencontrés pendant le stage et solutions apportées</li>
+                <li>Ce que j'ai appris (recherche, Wi-Fi, travail à l'international)</li>
+                <li>Ce que je ferais autrement · auto-évaluation</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- rapports -->
+          <div class="pjob-docs">
+            <span class="pjob-docs-label">Documents</span>
+            <div class="pjob-docs-list">
+              <span class="btn btn--ghost btn--sm is-placeholder" aria-disabled="true">
+                <span>Rapport de stage — à ajouter</span>
+              </span>
+            </div>
+          </div>
         </article>
       </section>
 
@@ -371,6 +417,22 @@
       window.addEventListener("scroll", function () {
         nav.classList.toggle("nav--scrolled", window.scrollY > 30);
       }, { passive: true });
+    })();
+
+    // durée de l'alternance, calculée à partir de la date actuelle
+    (function () {
+      var el = document.getElementById("serma-duration");
+      if (!el) return;
+      var start = el.dataset.start.split("-");
+      var now = new Date();
+      var months = (now.getFullYear() - Number(start[0])) * 12 + (now.getMonth() + 1 - Number(start[1]));
+      if (months < 0) return;
+      var years = Math.floor(months / 12);
+      var rest = months % 12;
+      var parts = [];
+      if (years > 0) parts.push(years + (years > 1 ? " ans" : " an"));
+      if (rest > 0 || years === 0) parts.push(rest + " mois");
+      el.textContent = "(" + parts.join(" et ") + ")";
     })();
   </script>
   <script src="js/reveal.js" defer></script>

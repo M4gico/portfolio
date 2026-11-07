@@ -1,0 +1,3 @@
+- Choisir un projet où tu es solide dessus -> Pas l'antenne
+- Ecrire les noms des compétences que tu as prouvé
+- 
