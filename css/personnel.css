@@ -466,3 +466,116 @@
 .pjob-docs .btn {
   background: var(--c-surface);
 }
+
+/* ── timelines sport (activities.html) ────────────────────────────────── */
+.sport-tls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+}
+
+@media (max-width: 720px) {
+  .sport-tls {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vtl {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* ligne verticale */
+.vtl::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--c-line);
+  border-radius: 2px;
+}
+
+.vtl li {
+  position: relative;
+  padding: 0 0 22px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vtl li:last-child {
+  padding-bottom: 0;
+}
+
+/* point sur la ligne */
+.vtl li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--c-surface);
+  border: 2px solid var(--c-accent);
+  box-sizing: border-box;
+}
+
+.vtl li:last-child::before {
+  background: var(--c-accent);
+}
+
+.vtl-k {
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+}
+
+.vtl-v {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--c-ink);
+}
+
+.sport-vis {
+  margin: 0;
+  padding: clamp(20px, 2.6vw, 30px) clamp(24px, 3vw, 36px);
+  border-top: 1px solid var(--c-line);
+}
+
+.sport-vis img {
+  width: 66%;
+  margin: 0 auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+.sport-vis figcaption {
+  font-size: 11.5px;
+  color: var(--c-muted);
+  font-style: italic;
+  text-align: center;
+  margin-top: 8px;
+}
+
+@media (max-width: 720px) {
+  .sport-vis img {
+    width: 100%;
+  }
+}
+
+/* lien dans un surlignage (ex. UEC) */
+a.hl {
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+a.hl:hover {
+  background: var(--c-accent);
+  color: var(--c-bg);
+}
