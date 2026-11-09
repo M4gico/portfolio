@@ -1,3 +1,11 @@
 - Choisir un projet où tu es solide dessus -> Pas l'antenne
 - Ecrire les noms des compétences que tu as prouvé
-- 
+- Structure projets perso
+    - Developpement hytale
+    - Création jeu vidéo sous Unity
+    - TidyUp
+- Activités externes
+    - Benevolat/Travail en festival
+    - Basket
+    - Tester pleins de trucs (FPGA, Raspberry Pi, montage PC etc...)
+- Expliquer les objectifs futur
