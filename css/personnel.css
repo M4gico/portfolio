@@ -45,14 +45,21 @@
   margin-bottom: clamp(24px, 3vw, 36px);
 }
 
+/* première section collée au titre : pas de trait ni d'espace en plus */
+.phero + .sect {
+  border-top: none;
+  padding-top: 0;
+}
+
 .phero-h1 {
   font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(26px, 3.2vw, 46px);
   line-height: 1;
   letter-spacing: -0.025em;
-  margin: 0 0 22px;
+  margin: 0;
   color: var(--c-ink);
+  text-align: center;
   text-wrap: balance;
 }
 
@@ -193,6 +200,15 @@
   min-height: 0;
   object-fit: contain;
   display: block;
+}
+
+.pjob-layout-img > video {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  object-fit: contain;
+  display: block;
+  background: #000;
 }
 
 .pjob-layout-img iframe {

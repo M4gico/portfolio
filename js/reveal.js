@@ -25,7 +25,7 @@
     seen.add(p);
     var group = elements.filter(function (e) { return e.parentNode === p; });
     group.forEach(function (e, i) {
-      e.style.transitionDelay = (i * 0.09) + 's';
+      e.style.setProperty('--reveal-delay', (i * 0.09) + 's');
     });
   });
 

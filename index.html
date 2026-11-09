@@ -27,6 +27,7 @@
 
   <title>Antoine BINNER · Portfolio</title>
 
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet"
@@ -44,9 +45,11 @@
           <span>Antoine BINNER</span>
         </a>
         <div class="nav-links">
+          <a href="index.html">Home</a>
           <a href="professionel.html">Professionel</a>
           <a href="personnel.html">Personnel</a>
           <a href="academique.html">Académique</a>
+          <a href="activities.html">Activités</a>
           <a href="#contact">Contact</a>
         </div>
         <a class="nav-cv" href="Files/Antoine_BINNER_CV.pdf" target="_blank" rel="noopener">
@@ -121,90 +124,51 @@
           </div>
         </div>
 
-        <div class="jobs">
-          <article class="job">
-            <div class="job-side">
-              <div class="job-logo"><img src="images/serma_logo.png" alt="Serma"
-                  style="width:100%;height:100%;object-fit:contain;border-radius:12px;background:#fff;padding:6px;" />
-              </div>
-              <div class="job-meta">
-                <div class="job-co">Serma Safety &amp; Security</div>
-                <div class="job-role">Testeur hardware en cybersécurité</div>
-                <div class="job-when">Septembre 2024 — aujourd'hui</div>
-                <div class="job-loc">Pessac, France</div>
+        <div class="pro-grid">
+          <article class="pro-card card-link" data-href="professionel.html#serma" tabindex="0" role="link">
+            <div class="pro-top">
+              <span class="perso-tag">Septembre 2024 — aujourd'hui</span>
+              <span class="pro-loc">Pessac, France</span>
+            </div>
+            <div class="pro-head">
+              <div class="pro-icon"><img src="images/serma_logo.png" alt="Serma" /></div>
+              <div>
+                <h3 class="perso-h3">Serma Safety &amp; Security</h3>
+                <div class="pro-role"><em>Alternance</em> - Testeur hardware en cybersécurité</div>
               </div>
             </div>
-            <div class="job-body">
-              <p class="job-lede">
-                Réalisation de tests d'<strong>injection de faute</strong> (Laser, EM, BBI) sur puces
-                sécurisées. En parallèle, développement d'un banc de test EMMI (émission microscopique)
-                en <span class="hl">PyQt</span> pour le laboratoire.
-              </p>
-              <div class="job-skills">
-                <h4 class="job-skills-title">Compétences acquises</h4>
-                <div class="job-skills-cols">
-                  <div class="job-skills-col">
-                    <span class="job-skills-k">Hard skills</span>
-                    <div class="job-tags">
-                      <span class="pill">Traitement du signal</span>
-                      <span class="pill">Injection de faute</span>
-                      <span class="pill">Python <span style="opacity:0.6">· automatisation · PyQt</span></span>
-                      <span class="pill">Emission Microscopie</span>
-                    </div>
-                  </div>
-                  <div class="job-skills-col">
-                    <span class="job-skills-k">Soft skills</span>
-                    <div class="job-tags">
-                      <span class="pill">Travail en équipe</span>
-                      <span class="pill">Respect des délais</span>
-                      <span class="pill">Savoir où trouver l'information</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <p class="perso-p">
+              Hardware <span class="hl">fault injection</span> (Laser, EM) on secured chip and <span
+                class="hl">R&D</span> project
+              on EMMI bench <br> <span class="hl">Top 5</span> security laboratories in the world
+            </p>
+            <figure class="pro-vis">
+              <img src="images/hardware_evaluator.jpg" alt="Carte bancaire sur le banc d'injection de fautes" />
+              <figcaption>Mise en position d'une carte bancaire sur le banc d'injection de fautes</figcaption>
+            </figure>
           </article>
 
-          <article class="job job--alt">
-            <div class="job-side">
-              <div class="job-logo job-logo--accent" style="background:#fff;padding:8px;"><img src="images/uec_logo.svg"
-                  alt="UEC" style="width:100%;height:100%;object-fit:contain;" /></div>
-              <div class="job-meta">
-                <div class="job-co">AWCC — University of Electro-Communications — Tokyo</div>
-                <div class="job-role">Stage de recherche · Wi-Fi</div>
-                <div class="job-when">08 avril — 12 juin 2026 · 2 mois ½</div>
-                <div class="job-loc">Tokyo, Japon 🇯🇵</div>
+          <article class="pro-card card-link" data-href="professionel.html#tokyo" tabindex="0" role="link">
+            <div class="pro-top">
+              <span class="perso-tag">8 avril — 12 juin 2026</span>
+              <span class="pro-loc">Tokyo, Japon</span>
+            </div>
+            <div class="pro-head">
+              <div class="pro-icon"><img src="images/uec_logo.svg" alt="UEC" /></div>
+              <div>
+                <h3 class="perso-h3">AWCC — University of Electro-Communications</h3>
+                <div class="pro-role"><em>Stage à l'étranger</em> - Recherche sur caractéristiques du WiFi</div>
               </div>
             </div>
-            <div class="job-body">
-              <p class="job-lede">
-                Récupération de données du réseau Wi-Fi (RSSI, bitrate, airtime...) et affichage
-                <strong>dynamique</strong> sur graphique. Contrôle et récupération des données à partir de
-                multiples connexions <span class="hl">SSH</span> avec des RaspberryPi en <strong>Python</strong>.
-              </p>
-              <div class="job-skills">
-                <h4 class="job-skills-title">Compétences acquises</h4>
-                <div class="job-skills-cols">
-                  <div class="job-skills-col">
-                    <span class="job-skills-k">Hard skills</span>
-                    <div class="job-tags">
-                      <span class="pill">Wi-Fi</span>
-                      <span class="pill">Connexion SSH</span>
-                      <span class="pill">Python <span style="opacity:0.6">· affichage de mesure</span></span>
-                      <span class="pill">Commandes Linux</span>
-                    </div>
-                  </div>
-                  <div class="job-skills-col">
-                    <span class="job-skills-k">Soft skills</span>
-                    <div class="job-tags">
-                      <span class="pill">Anglais professionnel</span>
-                      <span class="pill">Autonomie de recherche</span>
-                      <span class="pill">Adaptabilité culturelle</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <p class="perso-p">
+              Travail dans un laboratoire d'une université <span class="hl">japonaise</span> pour identifié la meilleure
+              mesure de la caractéristique <span class="hl">airtime</span> du WiFi
+            </p>
+            <figure class="pro-vis">
+              <img src="images/AWCC-5G_values_down.png" alt="Mesures en temps réel du réseau Wi-Fi"
+                style="object-fit:contain;background:#fff;" />
+              <figcaption>Mesures en temps réel du réseau Wi-Fi — débit, latence et RSSI</figcaption>
+            </figure>
           </article>
         </div>
         <div class="sect-discover">
@@ -230,7 +194,8 @@
         </div>
 
         <div class="perso-grid">
-          <article class="perso perso--feature">
+          <article class="perso perso--feature card-link" data-href="personnel.html#jeux-video" tabindex="0"
+            role="link">
             <div class="perso-tag">Mi-2024 — mi-2026</div>
             <h3 class="perso-h3">
               Développement de <em>jeux vidéo</em> en duo
@@ -262,51 +227,34 @@
             </div>
           </article>
 
-          <article class="perso perso--app">
+          <article class="perso perso--video card-link" data-href="personnel.html#hytale" tabindex="0" role="link">
+            <div class="perso-tag">Date à compléter</div>
+            <h3 class="perso-h3">
+              Développement d'un serveur <em>Hytale</em>
+            </h3>
+            <div class="todo-placeholder">
+              <span class="todo-placeholder-k">À compléter</span>
+              <p>Présenter le serveur Hytale : objectif, technologies utilisées, ce que j'ai développé et ce que
+                ça m'a appris. Ajouter une capture ou une vidéo.</p>
+            </div>
+          </article>
+
+          <article class="perso perso--app card-link" data-href="personnel.html#tidyup" tabindex="0" role="link">
             <div class="perso-tag">2025</div>
             <h3 class="perso-h3">
-              Une application pour lancer plusieurs <span class="hl">logiciels</span> sur plusieurs <span
-                class="hl">écrans</span>.
+              <em>Tidy Up</em> - interface graphique developée en Python
             </h3>
             <p class="perso-p">
               Placement rapide d'applications sur plusieurs écrans, en un raccourci. Née d'un agacement, devenue un
               outil que j'utilise tous les jours.
             </p>
             <figure class="app-vis">
-              <img src="videos/launch_demo.gif" alt="Tidy Up — démonstration de l'application"
-                style="width:100%;display:block;border-radius:var(--radius);" />
+              <video src="videos/tidyup_presentation.mp4" autoplay muted loop playsinline
+                style="width:100%;display:block;border-radius:var(--radius);"></video>
               <figcaption>Interface de l'application TidyUp</figcaption>
             </figure>
           </article>
 
-          <article class="perso perso--video">
-            <div class="perso-tag">2024</div>
-            <h3 class="perso-h3">
-              Des vidéos en <em>anglais</em>,<br />sur le hardware.
-            </h3>
-            <p class="perso-p">
-              Format court vertical pour les réseaux sociaux, pour expliquer ce que j'apprends et parler la langue à
-              voix haute.
-            </p>
-            <div class="perso-video-embed">
-              <iframe src="https://www.youtube.com/embed/jgDI5zN33B8" title="Hardware video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen loading="lazy"></iframe>
-            </div>
-          </article>
-
-          <article class="perso perso--sport">
-            <div class="perso-tag">Hors projet</div>
-            <h3 class="perso-h3">Pratique sportive</h3>
-            <p class="perso-p">
-              Basket en club depuis l'âge de 3 ans. Haltérophilie / muscu depuis 2 ans, avec un
-              coach pour améliorer les performances sportives axées sur le basket (explosivité, détente verticale)
-            </p>
-            <ul class="sport-list">
-              <li><span>↳</span> Basketball · 18+ ans</li>
-              <li><span>↳</span> Haltérophilie · 2 ans avec coach</li>
-            </ul>
-          </article>
         </div>
         <div class="sect-discover">
           <a href="personnel.html" class="btn btn--ghost btn--sm">
@@ -329,7 +277,7 @@
         </div>
 
         <div class="acad-grid">
-          <article class="acad-card">
+          <article class="acad-card card-link" data-href="academique.html#antenne" tabindex="0" role="link">
             <div class="acad-top">
               <span class="acad-n">Semestre 4</span>
             </div>
@@ -355,7 +303,7 @@
             </div>
           </article>
 
-          <article class="acad-card">
+          <article class="acad-card card-link" data-href="academique.html#kart" tabindex="0" role="link">
             <div class="acad-top">
               <span class="acad-n">Semestre 2</span>
             </div>
@@ -390,19 +338,75 @@
         </div>
       </section>
 
-      <!--04 - objectifs après le BUT -->
+      <!--04 - activités -->
+
+      <section class="sect" id="activites">
+        <div class="sect-intro">
+          <div class="sectmark">
+            <span class="sectmark-num">04</span>
+            <span class="sectmark-line"></span>
+            <span class="sectmark-label">Activités</span>
+          </div>
+        </div>
+
+        <div class="acti-grid">
+          <article class="acad-card card-link" data-href="activities.html#benevolat" tabindex="0" role="link">
+            <div class="acad-top">
+              <span class="acad-n">Engagement</span>
+            </div>
+            <h3 class="acad-title">Bénévolat &amp; festivals</h3>
+            <div class="todo-placeholder">
+              <span class="todo-placeholder-k">À compléter</span>
+              <p>Résumé en une phrase de mes expériences en festival.</p>
+            </div>
+          </article>
+
+          <article class="acad-card card-link" data-href="activities.html#basket" tabindex="0" role="link">
+            <div class="acad-top">
+              <span class="acad-n">Sport</span>
+            </div>
+            <h3 class="acad-title">Basket</h3>
+            <div class="todo-placeholder">
+              <span class="todo-placeholder-k">À compléter</span>
+              <p>Résumé en une phrase de ma pratique du basket en club.</p>
+            </div>
+          </article>
+
+          <article class="acad-card card-link" data-href="activities.html#experimentations" tabindex="0" role="link">
+            <div class="acad-top">
+              <span class="acad-n">Curiosité</span>
+            </div>
+            <h3 class="acad-title">Tester plein de choses</h3>
+            <div class="todo-placeholder">
+              <span class="todo-placeholder-k">À compléter</span>
+              <p>Résumé en une phrase : FPGA, Raspberry Pi, montage PC…</p>
+            </div>
+          </article>
+        </div>
+        <div class="sect-discover">
+          <a href="activities.html" class="btn btn--ghost btn--sm">
+            <span>Découvrir en détail</span>
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!--05 - objectifs après le BUT -->
 
       <section class="sect" id="objectifs">
         <div class="sect-intro">
           <div class="sectmark">
-            <span class="sectmark-num">04</span>
+            <span class="sectmark-num">05</span>
             <span class="sectmark-line"></span>
             <span class="sectmark-label">Après le BUT</span>
           </div>
         </div>
 
         <div class="acad-grid">
-          <article class="acad-card">
+          <article class="acad-card card-zoom">
             <div class="acad-top">
               <span class="acad-n">Objectif professionnel</span>
             </div>
@@ -414,7 +418,7 @@
             </div>
           </article>
 
-          <article class="acad-card">
+          <article class="acad-card card-zoom">
             <div class="acad-top">
               <span class="acad-n">Poursuite d'études</span>
             </div>
@@ -478,6 +482,20 @@
       };
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
+    })();
+  </script>
+  <script>
+    // widgets cliquables : ouvre la section dédiée de la page détaillée
+    (function () {
+      document.querySelectorAll('.card-link[data-href]').forEach(function (card) {
+        card.addEventListener('click', function (e) {
+          if (e.target.closest('a, button, iframe')) return;
+          window.location.href = card.dataset.href;
+        });
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter') window.location.href = card.dataset.href;
+        });
+      });
     })();
   </script>
   <script src="js/reveal.js" defer></script>
