@@ -579,3 +579,402 @@ a.hl:hover {
   background: var(--c-accent);
   color: var(--c-bg);
 }
+
+/* ── expérimentations : icônes à droite, détail à gauche (activities.html) ── */
+.exp {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 32px);
+}
+
+.exp-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: expIn 0.25s ease-in-out;
+}
+
+.exp-panel[hidden] {
+  display: none;
+}
+
+@keyframes expIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.exp-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
+}
+
+.exp-img--empty {
+  display: grid;
+  place-items: center;
+  border: 1px dashed var(--c-line);
+  color: var(--c-muted);
+  font-size: 13px;
+  font-style: italic;
+  background: color-mix(in oklab, var(--c-accentSoft) 18%, var(--c-surface));
+}
+
+.exp-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.exp-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 96px;
+  padding: 14px 8px;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-lg);
+  background: var(--c-surface);
+  color: var(--c-muted);
+  font: inherit;
+  cursor: pointer;
+  transition: color 200ms ease-in-out, border-color 200ms ease-in-out, background 200ms ease-in-out,
+    scale 200ms ease-in-out;
+}
+
+.exp-icon:hover,
+.exp-icon:focus-visible {
+  scale: 1.05;
+}
+
+.exp-icon.is-active {
+  color: var(--c-accent);
+  border-color: var(--c-accent);
+  background: color-mix(in oklab, var(--c-accentSoft) 30%, var(--c-surface));
+}
+
+.exp-icon-label {
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.exp-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 720px) {
+  .exp-blocks {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exp-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exp-block-title {
+  margin: 0;
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  font-weight: 500;
+}
+
+/* ── festivals : texte + frise à gauche, photo à droite (activities.html) ── */
+.fest {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+
+@media (max-width: 720px) {
+  .fest {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fest-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fest-item {
+  cursor: pointer;
+  outline: none;
+}
+
+.fest-item .vtl-v {
+  transition: color 200ms ease-in-out;
+}
+
+.fest-item::before {
+  transition: background 200ms ease-in-out, scale 200ms ease-in-out;
+}
+
+.fest-tl .fest-item.is-active::before {
+  background: var(--c-accent);
+  scale: 1.2;
+}
+
+.fest-tl .fest-item:not(.is-active)::before {
+  background: var(--c-surface);
+}
+
+.fest-item.is-active .vtl-v {
+  color: var(--c-accent);
+  font-weight: 500;
+}
+
+/* photos superposées, fondu entre elles */
+.fest-vis {
+  margin: 0;
+  display: grid;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--c-bg);
+}
+
+/* toutes les photos dans la même cellule : le cadre prend la taille de la plus
+   grande, les autres sont centrées sans être recadrées */
+.fest-img {
+  grid-area: 1 / 1;
+  align-self: center;
+  justify-self: center;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.fest-img.is-active {
+  opacity: 1;
+}
+
+/* image à gauche : décalage pour laisser visible le trait bleu de la carte */
+.pjob-layout--reverse > .pjob-layout-img {
+  margin-left: 3px;
+}
+
+/* ── jeu jouable intégré (itch.io) — personnel.html ── */
+.game-play {
+  margin-top: clamp(28px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.game-embed {
+  --game-k: 1;
+  --game-zoom: 1;
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  aspect-ratio: 960 / 540;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius-lg);
+  background: #231f20;
+  scale: 1;
+  transition: scale 350ms cubic-bezier(.2, .6, .2, 1), box-shadow 350ms ease-in-out;
+}
+
+/* zone visible = uniquement le jeu : la barre Unity et la barre itch.io sont rognées */
+.game-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.game-stage iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 962px;
+  height: 601px;
+  border: 0;
+  transform: scale(var(--game-k)) translate(-1px, -2px);
+  transform-origin: 0 0;
+}
+
+/* image de couverture + bouton « Jouer » avant le chargement du jeu */
+.game-poster {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  background: #231f20;
+  cursor: pointer;
+}
+
+.game-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.75);
+  transition: filter 200ms ease-in-out, scale 400ms cubic-bezier(.2, .6, .2, 1);
+}
+
+.game-poster:hover img,
+.game-poster:focus-visible img {
+  filter: brightness(0.9);
+  scale: 1.03;
+}
+
+.game-poster-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--c-accent);
+  color: #fff;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.3);
+  transition: scale 200ms ease-in-out;
+}
+
+.game-poster:hover .game-poster-btn {
+  scale: 1.06;
+}
+
+/* mode jeu : agrandi de 20 % au-dessus d'un fond assombri */
+.game-embed.is-playing {
+  z-index: 201;
+  scale: var(--game-zoom);
+  box-shadow: 0 24px 80px rgb(0 0 0 / 0.45);
+}
+
+/* pendant le mode jeu, la carte .pjob ne doit pas rogner le jeu agrandi */
+.pjob.is-unclipped {
+  overflow: visible;
+}
+
+.game-dim {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgb(6 14 28 / 0.72);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 350ms ease-in-out;
+}
+
+.game-dim.is-on {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: zoom-out;
+}
+
+html.game-lock {
+  overflow: hidden;
+}
+
+/* garde la place de la barre de défilement : pas de saut de mise en page quand on la bloque */
+html:has(.game-embed) {
+  scrollbar-gutter: stable;
+}
+
+.game-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--c-line);
+  border-radius: 50%;
+  background: var(--c-surface);
+  color: var(--c-ink);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  scale: calc(1 / var(--game-zoom));
+  transition: opacity 200ms ease-in-out;
+}
+
+/* jeu dézoomé : ce calque reçoit la molette (défilement de la page) et le clic (retour au jeu) */
+.game-shield {
+  position: absolute;
+  inset: 0;
+  display: none;
+  border-radius: inherit;
+  cursor: pointer;
+}
+
+.game-embed.is-loaded:not(.is-playing) .game-shield {
+  display: block;
+}
+
+/* relance du mode jeu : visible seulement si le jeu est lancé et le mode jeu quitté */
+.game-refocus {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--c-accent);
+  color: #fff;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.35);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease-in-out, scale 200ms ease-in-out;
+}
+
+.game-embed.is-loaded:not(.is-playing) .game-refocus {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.game-refocus:hover,
+.game-refocus:focus-visible {
+  scale: 1.1;
+}
+
+.game-embed.is-playing .game-close {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.game-play-foot {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--c-muted);
+}

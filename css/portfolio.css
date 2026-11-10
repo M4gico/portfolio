@@ -9,6 +9,8 @@
   --c-accent: #3b6cae;
   --c-accentSoft: #dde6f3;
   --c-accentInk: #0b1f3a;
+  --c-danger: #b4413c;
+  --c-dangerSoft: #f6e3e2;
 
   --font-display: 'Newsreader', 'Times New Roman', serif;
   --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -1364,6 +1366,22 @@ em {
 .conf-notice p strong {
   color: var(--c-ink);
   font-weight: 600;
+}
+
+/* variante rouge (avertissement) */
+.conf-notice--warn {
+  background: color-mix(in oklab, var(--c-dangerSoft) 60%, var(--c-surface));
+  border-color: color-mix(in oklab, var(--c-danger) 25%, var(--c-line));
+  border-left-color: var(--c-danger);
+}
+
+.conf-notice--warn svg,
+.conf-notice--warn p strong {
+  color: var(--c-danger);
+}
+
+.conf-notice--warn p {
+  font-size: 15.5px;
 }
 
 /* ── contact ────────────────────────────────────────────────────────────── */

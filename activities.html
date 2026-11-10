@@ -81,16 +81,36 @@
           </header>
 
           <div class="pjob-solo">
-            <div class="pjob-layout-row">
-              <div class="todo-placeholder">
-                <span class="todo-placeholder-k">À compléter</span>
-                <ul>
-                  <li>Quels festivals, quand, et en tant que bénévole ou salarié</li>
-                  <li>Missions réalisées (accueil, installation, technique, bar…)</li>
-                  <li>Ce que cela m'a apporté (travail en équipe, gestion du stress, contact avec le public)</li>
-                  <li>Photos éventuelles</li>
-                </ul>
+            <div class="fest">
+              <div class="fest-text">
+                <div class="todo-placeholder">
+                  <span class="todo-placeholder-k">À compléter</span>
+                  <p>Petit texte de présentation : bénévole ou salarié, missions réalisées et ce que cela m'a
+                    apporté.</p>
+                </div>
+                <ol class="vtl fest-tl">
+                  <li class="fest-item is-active" data-fest="rolling" tabindex="0">
+                    <span class="vtl-k">Juillet 2022</span>
+                    <span class="vtl-v">Rolling Stone Paris</span>
+                  </li>
+                  <li class="fest-item" data-fest="lolla" tabindex="0">
+                    <span class="vtl-k">Juillet 2023</span>
+                    <span class="vtl-v">Lollapalooza Paris</span>
+                  </li>
+                  <li class="fest-item" data-fest="isulia" tabindex="0">
+                    <span class="vtl-k">Novembre 2026</span>
+                    <span class="vtl-v">Isulia Festival - Bordeaux</span>
+                  </li>
+                </ol>
               </div>
+              <figure class="fest-vis">
+                <img class="fest-img is-active" data-fest="rolling" src="images/Festival/rolling_stone_paris.webp"
+                  alt="Rolling Stone Paris" />
+                <img class="fest-img" data-fest="lolla" src="images/Festival/lollapalooza-paris-724x1024.webp"
+                  alt="Lollapalooza Paris" />
+                <img class="fest-img" data-fest="isulia" src="images/Festival/isulia_festival.webp"
+                  alt="Isulia Festival" />
+              </figure>
             </div>
           </div>
         </article>
@@ -129,7 +149,7 @@
                   </li>
                   <li>
                     <span class="vtl-k">2012</span>
-                    <span class="vtl-v"><strong>3<sup>e</sup></strong> à la compétition de Göttingen</span>
+                    <span class="vtl-v"><strong>3<sup>e</sup></strong> à la compétition de Göttingen, Allemagne</span>
                   </li>
                   <li>
                     <span class="vtl-k">17 ans</span>
@@ -137,7 +157,7 @@
                   </li>
                   <li>
                     <span class="vtl-k">2026</span>
-                    <span class="vtl-v">Intégration de l'équipe de basket de l'<a class="hl"
+                    <span class="vtl-v">Intégration de l'équipe universitaire de basket de l'<a class="hl"
                         href="professionel.html#tokyo">UEC</a> pendant
                       mon stage à Tokyo</span>
                   </li>
@@ -191,15 +211,152 @@
           </header>
 
           <div class="pjob-solo">
-            <div class="pjob-layout-row">
-              <div class="todo-placeholder">
-                <span class="todo-placeholder-k">À compléter</span>
-                <ul>
-                  <li>FPGA : carte utilisée, ce que j'ai essayé de faire</li>
-                  <li>Raspberry Pi : projets réalisés</li>
-                  <li>Montage PC : configurations montées, pour moi ou pour d'autres</li>
-                  <li>Ce que j'en retire et photos éventuelles</li>
-                </ul>
+            <div class="exp">
+              <div class="exp-icons" role="tablist">
+                <button type="button" class="exp-icon is-active" data-exp="fpga" aria-label="FPGA">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                    stroke-linecap="round" aria-hidden="true">
+                    <rect x="6" y="6" width="12" height="12" rx="2" />
+                    <rect x="9.5" y="9.5" width="5" height="5" rx="1" />
+                    <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" />
+                  </svg>
+                  <span class="exp-icon-label">FPGA</span>
+                </button>
+                <button type="button" class="exp-icon" data-exp="rpi" aria-label="Raspberry Pi">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2.5" y="5" width="19" height="14" rx="2" />
+                    <path d="M5.5 8h7" stroke-dasharray="1 1.6" />
+                    <rect x="14.5" y="11" width="4.5" height="5" rx="0.8" />
+                    <circle cx="6.5" cy="14.5" r="1.6" />
+                  </svg>
+                  <span class="exp-icon-label">Raspberry Pi</span>
+                </button>
+                <button type="button" class="exp-icon" data-exp="pc" aria-label="Montage PC">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="6" y="2.5" width="12" height="19" rx="2" />
+                    <circle cx="12" cy="14" r="3" />
+                    <path d="M9 6h6M9 8.5h3" />
+                  </svg>
+                  <span class="exp-icon-label">Montage PC</span>
+                </button>
+                <button type="button" class="exp-icon" data-exp="video" aria-label="Vidéos électronique">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2.5" y="6" width="13" height="12" rx="2" />
+                    <path d="M15.5 10.5l6-3.5v10l-6-3.5" />
+                  </svg>
+                  <span class="exp-icon-label">Vidéos électronique</span>
+                </button>
+                <button type="button" class="exp-icon" data-exp="modding" aria-label="Modding de console">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path
+                      d="M7 7h10a4.5 4.5 0 0 1 4.4 5.4l-.8 4a2.6 2.6 0 0 1-4.6 1.1L14.5 15.5h-5L8 17.5a2.6 2.6 0 0 1-4.6-1.1l-.8-4A4.5 4.5 0 0 1 7 7z" />
+                    <path d="M8 10v3M6.5 11.5h3" />
+                    <circle cx="15.5" cy="10.8" r="0.6" fill="currentColor" />
+                    <circle cx="17.3" cy="12.6" r="0.6" fill="currentColor" />
+                  </svg>
+                  <span class="exp-icon-label">Modding de console</span>
+                </button>
+              </div>
+              <div class="exp-panels">
+                <div class="exp-panel is-active" data-exp="fpga">
+                  <div class="exp-blocks">
+                    <div class="exp-block">
+                      <h5 class="exp-block-title">Ce que j'ai réalisé</h5>
+                      <div class="todo-placeholder">
+                        <span class="todo-placeholder-k">À compléter</span>
+                        <p>Carte utilisée, ce que j'ai essayé de faire et ce que j'ai obtenu.</p>
+                      </div>
+                    </div>
+                    <div class="exp-block">
+                      <h5 class="exp-block-title">Pourquoi j'ai arrêté</h5>
+                      <div class="todo-placeholder">
+                        <span class="todo-placeholder-k">À compléter</span>
+                        <p>Raison de l'arrêt du projet.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="exp-img exp-img--empty">Image à ajouter</div>
+                </div>
+                <div class="exp-panel" data-exp="rpi" hidden>
+                  <div class="exp-blocks">
+                    <div class="exp-block">
+                      <h5 class="exp-block-title">Ce que j'ai réalisé</h5>
+                      <div class="todo-placeholder">
+                        <span class="todo-placeholder-k">À compléter</span>
+                        <p>Projets réalisés avec le Raspberry Pi et technologies utilisées.</p>
+                      </div>
+                    </div>
+                    <div class="exp-block">
+                      <h5 class="exp-block-title">Pourquoi j'ai arrêté</h5>
+                      <div class="todo-placeholder">
+                        <span class="todo-placeholder-k">À compléter</span>
+                        <p>Raison de l'arrêt du projet.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="exp-img exp-img--empty">Image à ajouter</div>
+                </div>
+                <div class="exp-panel" data-exp="pc" hidden>
+                  <div class="exp-blocks">
+                    <div class="exp-block">
+                      <h5 class="exp-block-title">Ce que j'ai réalisé</h5>
+                      <div class="todo-placeholder">
+                        <span class="todo-placeholder-k">À compléter</span>
+                        <p>Configurations montées, pour moi ou pour d'autres, et choix des composants.</p>
+                      </div>
+                    </div>
+                    <div class="exp-block">
+                      <h5 class="exp-block-title">Pourquoi j'ai arrêté</h5>
+                      <div class="todo-placeholder">
+                        <span class="todo-placeholder-k">À compléter</span>
+                        <p>Raison de l'arrêt du projet.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="exp-img exp-img--empty">Image à ajouter</div>
+                </div>
+                <div class="exp-panel" data-exp="video" hidden>
+                  <div class="exp-blocks">
+                    <div class="exp-block">
+                      <h5 class="exp-block-title">Ce que j'ai réalisé</h5>
+                      <div class="todo-placeholder">
+                        <span class="todo-placeholder-k">À compléter</span>
+                        <p>Sujets des vidéos sur l'électronique, format, plateformes de publication.</p>
+                      </div>
+                    </div>
+                    <div class="exp-block">
+                      <h5 class="exp-block-title">Pourquoi j'ai arrêté</h5>
+                      <div class="todo-placeholder">
+                        <span class="todo-placeholder-k">À compléter</span>
+                        <p>Raison de l'arrêt du projet.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="exp-img exp-img--empty">Image à ajouter</div>
+                </div>
+                <div class="exp-panel" data-exp="modding" hidden>
+                  <div class="exp-blocks">
+                    <div class="exp-block">
+                      <h5 class="exp-block-title">Ce que j'ai réalisé</h5>
+                      <div class="todo-placeholder">
+                        <span class="todo-placeholder-k">À compléter</span>
+                        <p>Consoles modifiées, modifications réalisées (puce, soudure, firmware…).</p>
+                      </div>
+                    </div>
+                    <div class="exp-block">
+                      <h5 class="exp-block-title">Pourquoi j'ai arrêté</h5>
+                      <div class="todo-placeholder">
+                        <span class="todo-placeholder-k">À compléter</span>
+                        <p>Raison de l'arrêt du projet.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="exp-img exp-img--empty">Image à ajouter</div>
+                </div>
               </div>
             </div>
           </div>
@@ -220,6 +377,42 @@
       window.addEventListener("scroll", function () {
         nav.classList.toggle("nav--scrolled", window.scrollY > 30);
       }, { passive: true });
+    })();
+  </script>
+  <script>
+    // festivals : le survol d'un festival de la frise affiche sa photo
+    (function () {
+      var items = document.querySelectorAll('.fest-item');
+      var imgs = document.querySelectorAll('.fest-img');
+      function show(key) {
+        items.forEach(function (li) { li.classList.toggle('is-active', li.dataset.fest === key); });
+        imgs.forEach(function (img) { img.classList.toggle('is-active', img.dataset.fest === key); });
+      }
+      items.forEach(function (li) {
+        ['mouseenter', 'focus', 'click'].forEach(function (ev) {
+          li.addEventListener(ev, function () { show(li.dataset.fest); });
+        });
+      });
+    })();
+  </script>
+  <script>
+    // expérimentations : le survol d'une icône affiche le projet associé
+    (function () {
+      var icons = document.querySelectorAll('.exp-icon');
+      var panels = document.querySelectorAll('.exp-panel');
+      function show(key) {
+        icons.forEach(function (b) { b.classList.toggle('is-active', b.dataset.exp === key); });
+        panels.forEach(function (p) {
+          var on = p.dataset.exp === key;
+          p.hidden = !on;
+          p.classList.toggle('is-active', on);
+        });
+      }
+      icons.forEach(function (b) {
+        ['mouseenter', 'focus', 'click'].forEach(function (ev) {
+          b.addEventListener(ev, function () { show(b.dataset.exp); });
+        });
+      });
     })();
   </script>
   <script src="js/reveal.js" defer></script>
